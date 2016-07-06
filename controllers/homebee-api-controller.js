@@ -125,7 +125,8 @@ module.exports = {
                                   res.end();
                               });
                           }else{
-                            var error = {code: 401, error: 'invalid_request', error_description: 'Sorry device not registered'};
+                            var ret = {code: 401, error: 'invalid_request', error_description: 'Sorry device not registered'};
+                            res.status(401);
                             utils.apidebug(JSON.stringify(ret, null, 4));
                             res.json(ret);
                             res.end();
@@ -135,6 +136,7 @@ module.exports = {
             }
         }else{
             var ret = {code: 401, error: 'invalid_request', error_description: 'Need POST request for this API call'};
+            res.status(401);
             utils.apidebug(JSON.stringify(ret, null, 4));
             res.json(ret);
             res.end();
