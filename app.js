@@ -35,9 +35,9 @@ app.use(cookieSession({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 if (process.env.ROOT){
-  app.use(express.static(process.env.ROOT || path.join(__dirname, 'public')));
+  app.use('/homebee', express.static(process.env.ROOT || path.join(__dirname, 'public')));
 }else{
-  app.use(path.join(__dirname, 'public'));
+  app.use('/homebee', path.join(__dirname, 'public'));
 }
 
 //oauth2 server integration
