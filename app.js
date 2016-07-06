@@ -35,7 +35,7 @@ app.use(cookieSession({
 }));
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('/home/santosh/homebee/homebee-server-app/platforms/browser/www'));
-app.use('/plugins', '/home/santosh/homebee/homebee-server-app/platforms/browser/www/plugins');
+app.use('/plugins', express.static('/home/santosh/homebee/homebee-server-app/platforms/browser/www/plugins'));
 // }else{
 //   utils.debug('No ROOT Environment variable ... using public folder');
 //   app.use(path.join(__dirname, 'public'));
