@@ -21,8 +21,8 @@ var httpsoptions = {
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-var httpsport = normalizePort(process.env.HTTPSPORT || '3043');
+var port = normalizePort(process.env.PORT || '4000');
+var httpsport = normalizePort(process.env.HTTPSPORT || '4043');
 app.set('port', port);
 app.set('httpsport', httpsport);
 
