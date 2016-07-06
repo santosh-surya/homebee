@@ -1,0 +1,55 @@
+{
+  "name": "homebee-server",
+  "version": "1.1.1",
+  "description": "HomeBee Server",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "gulp": "^3.5.6",
+    "gulp-sass": "^2.0.4",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "async": "^1.5.2",
+    "body-parser": "~1.13.2",
+    "cookie-parser": "^1.3.5",
+    "cookie-session": "^2.0.0-alpha.1",
+    "debug": "^2.2.0",
+    "ejs": "^2.4.1",
+    "emailjs": "^1.0.4",
+    "excel": "^0.1.4",
+    "express": "~4.13.1",
+    "express-responsive": "^0.1.0",
+    "express-session": "^1.13.0",
+    "googlemaps": "^1.1.3",
+    "intel": "^1.1.0",
+    "jade": "~1.11.0",
+    "json-stringify-safe": "^5.0.1",
+    "moment": "^2.11.2",
+    "mongodb": "^2.1.4",
+    "mongoose": "^4.3.5",
+    "mongoose-deep-populate": "^2.0.3",
+    "morgan": "^1.6.1",
+    "multer": "^1.1.0",
+    "node-xlsx": "^0.6.0",
+    "oauth2-server": "^2.4.1",
+    "serve-favicon": "~2.3.0",
+    "winston": "^2.1.1",
+    "yargs": "^3.32.0"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "gulp-util": "^2.2.14",
+    "shelljs": "^0.3.0"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": []
+}
