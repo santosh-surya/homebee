@@ -31,18 +31,6 @@ module.exports = {
             // console.log(req.oauth);
             async.series([
                 function(callback){
-                    //get roles for the user
-                    // utils.debug('getting roles for '+ req.oauth.bearerToken.userId + ' '+ req.oauth.bearerToken.clientId);
-                    req.app.oauthModel.findUserRoles({userId: req.oauth.bearerToken.userId, clientId: req.oauth.bearerToken.clientId}, function(err, userroles){
-                        if (err) callback(err);
-                        else {
-                            // console.log('get roles for the user');
-                            req.userRoles = userroles;
-                            callback();
-                        }
-                    });
-                },
-                function(callback){
                     //ensur this is NOT a register device request
                     // console.log(req.originalUrl);
                     if (req.originalUrl.indexOf('/homebee/register')<=0 && req.originalUrl.indexOf('/homebee/sms')<=0){
