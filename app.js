@@ -34,6 +34,11 @@ app.use(cookieSession({
     maxAge: 3600000
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+if (process.env.ROOT){
+  app.use(express.static(process.env.ROOT || path.join(__dirname, 'public')));
+}else{
+  app.use(path.join(__dirname, 'public'));
+}
 
 //oauth2 server integration
 app.oauthModel = require('./models/oauth2');
