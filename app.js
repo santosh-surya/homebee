@@ -86,7 +86,7 @@ app.use(function(req, res, next) {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-  res.jsonp({code: (err.status || 500), error: "URL not found", error_description: "URL is not programmed to respond"});
+  res.jsonp({code: (err.status || 500), error: error.message, error_description: "URL is not programmed to respond"});
   res.end();
 });
 
