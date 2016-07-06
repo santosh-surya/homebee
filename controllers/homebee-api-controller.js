@@ -126,6 +126,9 @@ module.exports = {
                               });
                           }else{
                             var error = {code: 401, error: 'invalid_request', error_description: 'Sorry device not registered'};
+                            utils.apidebug(JSON.stringify(ret, null, 4));
+                            res.json(ret);
+                            res.end();
                           }
                   });
                 }
