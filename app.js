@@ -33,15 +33,13 @@ app.use(cookieSession({
     secret: 'howisitgoing',
     maxAge: 3600000
 }));
-app.use(express.static(path.join(__dirname, 'public')));
-if (process.env.ROOT){
-  utils.debug('Found ROOT Environment variable ... '+process.env.ROOT);
-  app.use(express.static(process.env.ROOT));
-  app.use('/plugins', express.static(process.env.ROOT+"/plugins"));
-}else{
-  utils.debug('No ROOT Environment variable ... using public folder');
-  app.use(path.join(__dirname, 'public'));
-}
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('/home/santosh/homebee/homebee-server-app/platforms/browser/www'));
+app.use('/plugins', '/home/santosh/homebee/homebee-server-app/platforms/browser/www/plugins');
+// }else{
+//   utils.debug('No ROOT Environment variable ... using public folder');
+//   app.use(path.join(__dirname, 'public'));
+// }
 
 //oauth2 server integration
 app.oauthModel = require('./models/oauth2');
