@@ -93,7 +93,7 @@ module.exports = {
                 res.end();
             }else{
                 utils.apidebug('registering new device');
-                if (req.bod.deviceUUID == "NEW"){
+                if (req.body.deviceUUID == "NEW"){
                   //create new device
                   device = new req.app.homebeedevices.HomeBeeDeviceModel({deviceUUID: req.body.deviceUUID, deviceTYPE: req.body.deviceTYPE, version: req.body.version});
                   device.save(function(err, device) {
