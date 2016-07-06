@@ -35,8 +35,10 @@ app.use(cookieSession({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 if (process.env.ROOT){
+  utils.debug('Found ROOT Environment variable ... '+process.env.ROOT);
   app.use('/homebee', express.static(process.env.ROOT || path.join(__dirname, 'public')));
 }else{
+  utils.debug('No ROOT Environment variable ... using public folder');
   app.use('/homebee', path.join(__dirname, 'public'));
 }
 
