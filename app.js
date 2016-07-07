@@ -34,7 +34,8 @@ app.use(cookieSession({
     maxAge: 3600000
 }));
 // app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('/home/santosh/homebee/homebee-server-app/platforms/browser/www'));
+// app.use(express.static('/home/santosh/homebee/homebee-server-app/platforms/browser/www'));
+app.use(express.static('/home/santosh/homebee/homebee-server-app/www'));
 // }else{
 //   utils.debug('No ROOT Environment variable ... using public folder');
 //   app.use(path.join(__dirname, 'public'));
