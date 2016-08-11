@@ -8,7 +8,7 @@ if (utils.args.dbdebug)
 // Makes connection asynchronously. Mongoose will queue up database
 // operations and release them when the connection is complete.
 exports.oauth2 = mongoose.createConnection(urioauth2);
-exports.junglebee = mongoose.createConnection(urihomebee);
+exports.homebee = mongoose.createConnection(urihomebee);
 
 // CONNECTION EVENTS
 // When successfully connected
@@ -36,24 +36,24 @@ process.on('SIGINT', function() {
 
 // CONNECTION EVENTS
 // When successfully connected
-exports.junglebee.on('connected', function () {
-  utils.debug('Mongoose junglebee connection open to ' + urihomebee);
-});
+exports.homebee.on('connected', function () {
+  utils.debug('Mongoose homebee connection open to ' + urihomebee);
 
+});
 // If the connection throws an error
-exports.junglebee.on('error',function (err) {
-  utils.debug('Mongoose junglebee connection error: ' + err);
+exports.homebee.on('error',function (err) {
+  utils.debug('Mongoose homebee connection error: ' + err);
 });
 
 // When the connection is disconnected
-exports.junglebee.on('disconnected', function () {
-  utils.debug('Mongoose junglebee connection disconnected');
+exports.homebee.on('disconnected', function () {
+  utils.debug('Mongoose homebee connection disconnected');
 });
 
 // If the Node process ends, close the Mongoose connection
 process.on('SIGINT', function() {
-  exports.junglebee.close(function () {
-    utils.debug('Mongoose junglebee connection disconnected through app termination');
+  exports.homebee.close(function () {
+    utils.debug('Mongoose homebee connection disconnected through app termination');
     process.exit(0);
   });
 });

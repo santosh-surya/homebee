@@ -3,8 +3,8 @@ var db = require('./dbconnection'),
   async = require('async'),
   utils = require('../controllers/utils'),
   Schema = mongoose.Schema;
-   
-  
+
+
 //
 // Schemas definitions
 //
@@ -15,6 +15,5 @@ var SmsSchema = new mongoose.Schema({
     sent: {type: Boolean, default: false}
 });
 
-var SmsModel = db.junglebee.model('Sms', SmsSchema);
+var SmsModel = db.homebee.model('Sms', SmsSchema);
 module.exports.SmsModel = SmsModel;
-

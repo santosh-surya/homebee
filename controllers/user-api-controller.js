@@ -27,7 +27,7 @@ module.exports = {
 
                     //get roles for the user
                     // utils.debug('getting roles for '+ req.oauth.bearerToken.userId + ' '+ req.oauth.bearerToken.clientId);
-                    req.app.oauthModel.findUserRoles({userId: req.oauth.bearerToken.userId, clientId: req.oauth.bearerToken.clientId}, function(err, userroles){
+                    req.app.models.findUserRoles({userId: req.oauth.bearerToken.userId, clientId: req.oauth.bearerToken.clientId}, function(err, userroles){
                         if (err) callback(err);
                         else {
                             // console.log('get roles for the user');

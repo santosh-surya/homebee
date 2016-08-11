@@ -3,6 +3,7 @@ var router = express.Router();
 var homebeeapi = require('../controllers/homebee-api-controller');
 
 router.use('/register', homebeeapi.authorise, homebeeapi.register);
-router.use('/update', homebeeapi.authorise, homebeeapi.update);
+router.use('/login', homebeeapi.authorise, homebeeapi.login);
+router.use('/user-devices', homebeeapi.authorise, homebeeapi.userDevices);
 
 module.exports = router;
