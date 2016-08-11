@@ -37343,3 +37343,307 @@ api.DEBUG: {
 }
 log.DEBUG: Mongoose oauth2 connection disconnected
 log.DEBUG: Mongoose oauth2 connection disconnected through app termination
+[33m[nodemon] 1.9.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./bin/www --log=debug --dbdebug1=true --homebeeserver`[39m
+log.DEBUG: app starting
+log.DEBUG: No ROOT Environment variable ...
+log.DEBUG: using: /Users/santosh/Developement/homebee/homebee-server-app/www
+api.DEBUG: {
+    "_": [],
+    "log": "debug",
+    "dbdebug1": "true",
+    "homebeeserver": true,
+    "$0": "bin/www"
+}
+log.DEBUG: Listening on port 4000
+log.DEBUG: Listening on port 4043
+log.DEBUG: Mongoose oauth2 connection open to mongodb://localhost/homebee_oauth2
+api.DEBUG: Checking OAUTH DB setup ...
+api.DEBUG: verify app client
+log.DEBUG: Mongoose homebee connection open to mongodb://localhost/homebee
+api.DEBUG: creating app client
+api.DEBUG: app client created.
+api.DEBUG: {}
+api.DEBUG: {
+    "__v": 0,
+    "clientId": "HomeBeeApp",
+    "clientSecret": "HomeBee App Workers",
+    "_id": "57ac53f4969c162a40a16f9a"
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www --log=debug --dbdebug1=true --homebeeserver`[39m
+log.DEBUG: app starting
+log.DEBUG: No ROOT Environment variable ...
+log.DEBUG: using: /Users/santosh/Developement/homebee/homebee-server-app/www
+api.DEBUG: {
+    "_": [],
+    "log": "debug",
+    "dbdebug1": "true",
+    "homebeeserver": true,
+    "$0": "bin/www"
+}
+log.DEBUG: Listening on port 4000
+log.DEBUG: Listening on port 4043
+log.DEBUG: Mongoose oauth2 connection open to mongodb://localhost/homebee_oauth2
+api.DEBUG: Checking OAUTH DB setup ...
+api.DEBUG: verify app client
+log.DEBUG: Mongoose homebee connection open to mongodb://localhost/homebee
+api.DEBUG: app client found
+api.DEBUG: verify dummy user
+api.DEBUG: verify super user
+api.DEBUG: verify app user
+api.DEBUG: creating new super user
+api.DEBUG: creating dummy user
+api.DEBUG: super user created.
+api.DEBUG: {
+    "ensure_app_client": {
+        "_id": "57ac53f4969c162a40a16f9a",
+        "clientId": "HomeBeeApp",
+        "clientSecret": "HomeBee App Workers",
+        "__v": 0
+    }
+}
+api.DEBUG: {
+    "__v": 0,
+    "username": "superadmin",
+    "password": "password",
+    "firstname": "Santosh",
+    "lastname": "Singh",
+    "email": "santosh.singh@surya-solutions.com",
+    "_id": "57ac54496da05f68401591e5"
+}
+api.DEBUG: creating new app user
+api.DEBUG: dummy user created.
+api.DEBUG: app user created
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node ./bin/www --log=debug --dbdebug1=true --homebeeserver`[39m
+log.DEBUG: app starting
+log.DEBUG: No ROOT Environment variable ...
+log.DEBUG: using: /Users/santosh/Developement/homebee/homebee-server-app/www
+api.DEBUG: {
+    "_": [],
+    "log": "debug",
+    "dbdebug1": "true",
+    "homebeeserver": true,
+    "$0": "bin/www"
+}
+log.DEBUG: Listening on port 4000
+log.DEBUG: Listening on port 4043
+log.DEBUG: Mongoose oauth2 connection open to mongodb://localhost/homebee_oauth2
+api.DEBUG: Checking OAUTH DB setup ...
+api.DEBUG: verify app client
+log.DEBUG: Mongoose homebee connection open to mongodb://localhost/homebee
+api.DEBUG: app client found
+api.DEBUG: verify dummy user
+api.DEBUG: verify super user
+api.DEBUG: verify app user
+api.DEBUG: super user found
+api.DEBUG: dummy user found
+api.DEBUG: verify device UUID-1
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+api.DEBUG: verify dummy user role
+api.DEBUG: verify super user role
+api.DEBUG: app user found
+api.DEBUG: creating dummy user role
+api.DEBUG: creating super user role
+api.DEBUG: creating device UUID-1
+saving device
+api.DEBUG: userrole created: { __v: 0,
+  userId: '57ac54496da05f68401591e5',
+  clientId: '57ac53f4969c162a40a16f9a',
+  role: 'SUPER_ADMIN',
+  _id: 57ac54851ef9469d40bf5c31 }
+api.DEBUG: verify device UUID-2
+api.DEBUG: creating device UUID-2
+saving device
+api.DEBUG: {
+    "ensure_app_client": {
+        "_id": "57ac53f4969c162a40a16f9a",
+        "clientId": "HomeBeeApp",
+        "clientSecret": "HomeBee App Workers",
+        "__v": 0
+    },
+    "ensure_super_user": {
+        "_id": "57ac54496da05f68401591e5",
+        "username": "superadmin",
+        "password": "password",
+        "firstname": "Santosh",
+        "lastname": "Singh",
+        "email": "santosh.singh@surya-solutions.com",
+        "__v": 0
+    },
+    "ensure_dummy_user": {
+        "_id": "57ac54496da05f68401591e6",
+        "username": "dummy",
+        "password": "password",
+        "firstname": "Dummy",
+        "lastname": "User",
+        "email": "dummy.user@surya-solutions.com",
+        "__v": 0
+    },
+    "ensure_app_user": {
+        "_id": "57ac54496da05f68401591e7",
+        "username": "homebeeapp",
+        "password": "H0m3b33@pp",
+        "__v": 0
+    },
+    "ensure_super_user_role": {
+        "__v": 0,
+        "userId": "57ac54496da05f68401591e5",
+        "clientId": "57ac53f4969c162a40a16f9a",
+        "role": "SUPER_ADMIN",
+        "_id": "57ac54851ef9469d40bf5c31"
+    },
+    "ensure_dummy_user_role": {
+        "__v": 0,
+        "userId": "57ac54496da05f68401591e6",
+        "clientId": "57ac53f4969c162a40a16f9a",
+        "role": "USER",
+        "_id": "57ac54841ef9469d40bf5c30"
+    },
+    "ensure_dummy_devices": [
+        {
+            "__v": 0,
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac54496da05f68401591e6",
+            "_id": "57ac54851ef9469d40bf5c32"
+        },
+        {
+            "__v": 0,
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac54496da05f68401591e6",
+            "_id": "57ac54851ef9469d40bf5c33"
+        }
+    ]
+}
+api.DEBUG: DB setup complete
+log.DEBUG: Mongoose oauth2 connection disconnected
+log.DEBUG: Mongoose oauth2 connection disconnected through app termination
+[33m[nodemon] 1.9.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./bin/www --log=debug --dbdebug1=true --homebeeserver`[39m
+log.DEBUG: app starting
+log.DEBUG: No ROOT Environment variable ...
+log.DEBUG: using: /Users/santosh/Developement/homebee/homebee-server-app/www
+api.DEBUG: {
+    "_": [],
+    "log": "debug",
+    "dbdebug1": "true",
+    "homebeeserver": true,
+    "$0": "bin/www"
+}
+log.DEBUG: Listening on port 4000
+log.DEBUG: Listening on port 4043
+log.DEBUG: Mongoose oauth2 connection open to mongodb://localhost/homebee_oauth2
+api.DEBUG: Checking OAUTH DB setup ...
+api.DEBUG: verify app client
+log.DEBUG: Mongoose homebee connection open to mongodb://localhost/homebee
+api.DEBUG: creating app client
+api.DEBUG: app client created.
+api.DEBUG: verify dummy user
+api.DEBUG: verify super user
+api.DEBUG: verify app user
+api.DEBUG: creating dummy user
+api.DEBUG: creating new super user
+api.DEBUG: creating new app user
+api.DEBUG: dummy user created.
+api.DEBUG: super user created.
+api.DEBUG: verify device UUID-1
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+api.DEBUG: verify dummy user role
+api.DEBUG: verify super user role
+api.DEBUG: app user created
+api.DEBUG: creating dummy user role
+api.DEBUG: creating device UUID-1
+saving device
+api.DEBUG: creating super user role
+api.DEBUG: userrole created: { __v: 0,
+  userId: '57ac549a571cfab54036952c',
+  clientId: '57ac549a571cfab54036952a',
+  role: 'SUPER_ADMIN',
+  _id: 57ac549a571cfab540369530 }
+api.DEBUG: verify device UUID-2
+api.DEBUG: creating device UUID-2
+saving device
+api.DEBUG: {
+    "ensure_app_client": {
+        "__v": 0,
+        "clientId": "HomeBeeApp",
+        "clientSecret": "HomeBee App Workers",
+        "_id": "57ac549a571cfab54036952a"
+    },
+    "ensure_dummy_user": {
+        "__v": 0,
+        "username": "dummy",
+        "password": "password",
+        "firstname": "Dummy",
+        "lastname": "User",
+        "email": "dummy.user@surya-solutions.com",
+        "_id": "57ac549a571cfab54036952b"
+    },
+    "ensure_super_user": {
+        "__v": 0,
+        "username": "superadmin",
+        "password": "password",
+        "firstname": "Santosh",
+        "lastname": "Singh",
+        "email": "santosh.singh@surya-solutions.com",
+        "_id": "57ac549a571cfab54036952c"
+    },
+    "ensure_app_user": {
+        "__v": 0,
+        "username": "homebeeapp",
+        "password": "H0m3b33@pp",
+        "_id": "57ac549a571cfab54036952d"
+    },
+    "ensure_dummy_user_role": {
+        "__v": 0,
+        "userId": "57ac549a571cfab54036952b",
+        "clientId": "57ac549a571cfab54036952a",
+        "role": "USER",
+        "_id": "57ac549a571cfab54036952e"
+    },
+    "ensure_super_user_role": {
+        "__v": 0,
+        "userId": "57ac549a571cfab54036952c",
+        "clientId": "57ac549a571cfab54036952a",
+        "role": "SUPER_ADMIN",
+        "_id": "57ac549a571cfab540369530"
+    },
+    "ensure_dummy_devices": [
+        {
+            "__v": 0,
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac549a571cfab54036952b",
+            "_id": "57ac549a571cfab54036952f"
+        },
+        {
+            "__v": 0,
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac549a571cfab54036952b",
+            "_id": "57ac549a571cfab540369531"
+        }
+    ]
+}
+api.DEBUG: DB setup complete
+log.DEBUG: Mongoose oauth2 connection disconnected
+log.DEBUG: Mongoose oauth2 connection disconnected through app termination

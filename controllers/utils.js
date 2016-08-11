@@ -108,7 +108,7 @@ var verifySetup = function(model, apidebug){
                     else{
                       _appClientId = client._id;
                       apidebug('app client created.');
-                      callback(client);
+                      callback(null, client);
                     }
                 })
               }else{
@@ -130,7 +130,7 @@ var verifySetup = function(model, apidebug){
                     if (err) callback(err);
                     else{
                         apidebug('app user created');
-                        callback(user);
+                        callback(null, user);
                     }
                 });
               }else{
@@ -157,7 +157,7 @@ var verifySetup = function(model, apidebug){
                     if (err) callback(err);
                     else{
                         apidebug('super user created.');
-                        callback(user);
+                        callback(null, user);
                     }
                 })
               }else{
@@ -182,7 +182,7 @@ var verifySetup = function(model, apidebug){
                     if (err) callback(err);
                     else{
                         apidebug('userrole created: '+userrole);
-                        callback(userrole);
+                        callback(null, userrole);
                     }
                 })
               }else{
@@ -209,7 +209,7 @@ var verifySetup = function(model, apidebug){
                     if (err) callback(err);
                     else{
                         apidebug('dummy user created.');
-                        callback(user);
+                        callback(null, user);
                     }
                 })
               }else{
@@ -233,7 +233,7 @@ var verifySetup = function(model, apidebug){
                 userrole.save(function(err, userrole){
                     if (err) callback(err);
                     else{
-                        callback(userrole);
+                        callback(null, userrole);
                     }
                 })
               }else{
