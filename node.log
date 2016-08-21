@@ -37647,3 +37647,4169 @@ api.DEBUG: {
 api.DEBUG: DB setup complete
 log.DEBUG: Mongoose oauth2 connection disconnected
 log.DEBUG: Mongoose oauth2 connection disconnected through app termination
+[33m[nodemon] 1.9.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./bin/www --log=debug --dbdebug1=true --homebeeserver`[39m
+log.DEBUG: app starting
+log.DEBUG: No ROOT Environment variable ...
+log.DEBUG: using: /Users/santosh/Developement/homebee/homebee-server-app/www
+api.DEBUG: {
+    "_": [],
+    "log": "debug",
+    "dbdebug1": "true",
+    "homebeeserver": true,
+    "$0": "bin/www"
+}
+log.DEBUG: Listening on port 4000
+log.DEBUG: Listening on port 4043
+log.DEBUG: Mongoose oauth2 connection open to mongodb://localhost/homebee_oauth2
+api.DEBUG: Checking OAUTH DB setup ...
+api.DEBUG: verify app client
+log.DEBUG: Mongoose homebee connection open to mongodb://localhost/homebee
+api.DEBUG: app client found
+api.DEBUG: verify dummy user
+api.DEBUG: verify super user
+api.DEBUG: verify app user
+api.DEBUG: dummy user found
+api.DEBUG: super user found
+api.DEBUG: verify device UUID-1
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+api.DEBUG: verify dummy user role
+api.DEBUG: verify super user role
+api.DEBUG: app user found
+api.DEBUG: super user role found
+api.DEBUG: found device UUID-1
+api.DEBUG: verify device UUID-2
+api.DEBUG: dummy user role found
+api.DEBUG: found device UUID-2
+api.DEBUG: {
+    "ensure_app_client": {
+        "_id": "57ac549a571cfab54036952a",
+        "clientId": "HomeBeeApp",
+        "clientSecret": "HomeBee App Workers",
+        "__v": 0
+    },
+    "ensure_dummy_user": {
+        "_id": "57ac549a571cfab54036952b",
+        "username": "dummy",
+        "password": "password",
+        "firstname": "Dummy",
+        "lastname": "User",
+        "email": "dummy.user@surya-solutions.com",
+        "__v": 0
+    },
+    "ensure_super_user": {
+        "_id": "57ac549a571cfab54036952c",
+        "username": "superadmin",
+        "password": "password",
+        "firstname": "Santosh",
+        "lastname": "Singh",
+        "email": "santosh.singh@surya-solutions.com",
+        "__v": 0
+    },
+    "ensure_app_user": {
+        "_id": "57ac549a571cfab54036952d",
+        "username": "homebeeapp",
+        "password": "H0m3b33@pp",
+        "__v": 0
+    },
+    "ensure_super_user_role": {
+        "_id": "57ac549a571cfab540369530",
+        "userId": "57ac549a571cfab54036952c",
+        "clientId": "57ac549a571cfab54036952a",
+        "role": "SUPER_ADMIN",
+        "__v": 0
+    },
+    "ensure_dummy_user_role": {
+        "_id": "57ac549a571cfab54036952e",
+        "userId": "57ac549a571cfab54036952b",
+        "clientId": "57ac549a571cfab54036952a",
+        "role": "USER",
+        "__v": 0
+    },
+    "ensure_dummy_devices": [
+        {
+            "_id": "57ac549a571cfab54036952f",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac549a571cfab54036952b",
+            "__v": 0
+        },
+        {
+            "_id": "57ac549a571cfab540369531",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac549a571cfab54036952b",
+            "__v": 0
+        }
+    ]
+}
+api.DEBUG: DB setup complete
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57ac549a571cfab54036952b,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57ac549a571cfab54036952b
+finished
+{ _id: 57ac549a571cfab54036952b,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57ac549a571cfab54036952f,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57ac549a571cfab54036952b,
+    __v: 0 },
+  { _id: 57ac549a571cfab540369531,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57ac549a571cfab54036952b,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57ac549a571cfab54036952f",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac549a571cfab54036952b",
+            "__v": 0
+        },
+        {
+            "_id": "57ac549a571cfab540369531",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac549a571cfab54036952b",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57ac549a571cfab54036952b,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57ac549a571cfab54036952b
+finished
+{ _id: 57ac549a571cfab54036952b,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57ac549a571cfab54036952f,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57ac549a571cfab54036952b,
+    __v: 0 },
+  { _id: 57ac549a571cfab540369531,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57ac549a571cfab54036952b,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57ac549a571cfab54036952f",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac549a571cfab54036952b",
+            "__v": 0
+        },
+        {
+            "_id": "57ac549a571cfab540369531",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57ac549a571cfab54036952b",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /favicon.ico
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon-precomposed.png
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon.png
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon-precomposed.png
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon.png
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon-precomposed.png
+log.DEBUG: Not found
+log.DEBUG: /favicon.ico
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon.png
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon-precomposed.png
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon.png
+log.DEBUG: Not found
+[33m[nodemon] 1.9.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./bin/www --log=debug --dbdebug1=true --homebeeserver`[39m
+log.DEBUG: app starting
+log.DEBUG: No ROOT Environment variable ...
+log.DEBUG: using: /Users/santosh/Developement/homebee/homebee-server-app/www
+api.DEBUG: {
+    "_": [],
+    "log": "debug",
+    "dbdebug1": "true",
+    "homebeeserver": true,
+    "$0": "bin/www"
+}
+log.DEBUG: Listening on port 4000
+log.DEBUG: Listening on port 4043
+log.DEBUG: Mongoose oauth2 connection disconnected
+log.DEBUG: Mongoose oauth2 connection error: MongoError: connect ECONNREFUSED 127.0.0.1:27017
+log.DEBUG: Mongoose homebee connection disconnected
+log.DEBUG: Mongoose homebee connection error: MongoError: connect ECONNREFUSED 127.0.0.1:27017
+log.DEBUG: Mongoose oauth2 connection disconnected through app termination
+[33m[nodemon] 1.9.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./bin/www --log=debug --dbdebug1=true --homebeeserver`[39m
+log.DEBUG: app starting
+log.DEBUG: No ROOT Environment variable ...
+log.DEBUG: using: /Users/santosh/Developement/homebee/homebee-server-app/www
+api.DEBUG: {
+    "_": [],
+    "log": "debug",
+    "dbdebug1": "true",
+    "homebeeserver": true,
+    "$0": "bin/www"
+}
+log.DEBUG: Listening on port 4000
+log.DEBUG: Listening on port 4043
+log.DEBUG: Mongoose oauth2 connection open to mongodb://localhost/homebee_oauth2
+api.DEBUG: Checking OAUTH DB setup ...
+api.DEBUG: verify app client
+log.DEBUG: Mongoose homebee connection open to mongodb://localhost/homebee
+api.DEBUG: creating app client
+api.DEBUG: app client created.
+api.DEBUG: verify dummy user
+api.DEBUG: verify super user
+api.DEBUG: verify app user
+api.DEBUG: creating new super user
+api.DEBUG: creating dummy user
+api.DEBUG: super user created.
+api.DEBUG: verify super user role
+api.DEBUG: creating new app user
+api.DEBUG: dummy user created.
+api.DEBUG: verify device UUID-1
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+api.DEBUG: verify dummy user role
+api.DEBUG: creating super user role
+api.DEBUG: app user created
+api.DEBUG: creating dummy user role
+api.DEBUG: creating device UUID-1
+saving device
+api.DEBUG: userrole created: { __v: 0,
+  userId: '57b57f4b1c03bab207e931a2',
+  clientId: '57b57f4b1c03bab207e931a1',
+  role: 'SUPER_ADMIN',
+  _id: 57b57f4b1c03bab207e931a5 }
+api.DEBUG: verify device UUID-2
+api.DEBUG: creating device UUID-2
+saving device
+api.DEBUG: {
+    "ensure_app_client": {
+        "__v": 0,
+        "clientId": "HomeBeeApp",
+        "clientSecret": "HomeBee App Workers",
+        "_id": "57b57f4b1c03bab207e931a1"
+    },
+    "ensure_super_user": {
+        "__v": 0,
+        "username": "superadmin",
+        "password": "password",
+        "firstname": "Santosh",
+        "lastname": "Singh",
+        "email": "santosh.singh@surya-solutions.com",
+        "_id": "57b57f4b1c03bab207e931a2"
+    },
+    "ensure_dummy_user": {
+        "__v": 0,
+        "username": "dummy",
+        "password": "password",
+        "firstname": "Dummy",
+        "lastname": "User",
+        "email": "dummy.user@surya-solutions.com",
+        "_id": "57b57f4b1c03bab207e931a3"
+    },
+    "ensure_app_user": {
+        "__v": 0,
+        "username": "homebeeapp",
+        "password": "H0m3b33@pp",
+        "_id": "57b57f4b1c03bab207e931a4"
+    },
+    "ensure_super_user_role": {
+        "__v": 0,
+        "userId": "57b57f4b1c03bab207e931a2",
+        "clientId": "57b57f4b1c03bab207e931a1",
+        "role": "SUPER_ADMIN",
+        "_id": "57b57f4b1c03bab207e931a5"
+    },
+    "ensure_dummy_user_role": {
+        "__v": 0,
+        "userId": "57b57f4b1c03bab207e931a3",
+        "clientId": "57b57f4b1c03bab207e931a1",
+        "role": "USER",
+        "_id": "57b57f4b1c03bab207e931a6"
+    },
+    "ensure_dummy_devices": [
+        {
+            "__v": 0,
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "_id": "57b57f4b1c03bab207e931a7"
+        },
+        {
+            "__v": 0,
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "_id": "57b57f4c1c03bab207e931a8"
+        }
+    ]
+}
+api.DEBUG: DB setup complete
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+log.DEBUG: /favicon.ico
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon-precomposed.png
+log.DEBUG: Not found
+log.DEBUG: /apple-touch-icon.png
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /dashboard
+log.DEBUG: Not found
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+log.DEBUG: /homebee/dashboard
+log.DEBUG: Not found
+log.DEBUG: /cordova.js
+log.DEBUG: Not found
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
