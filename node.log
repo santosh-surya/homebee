@@ -41813,3 +41813,5 @@ api.DEBUG: {
         }
     ]
 }
+log.DEBUG: Mongoose oauth2 connection disconnected
+log.DEBUG: Mongoose oauth2 connection disconnected through app termination
