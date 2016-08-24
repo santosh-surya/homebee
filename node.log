@@ -42018,3 +42018,470 @@ api.DEBUG: {
 }
 log.DEBUG: Mongoose oauth2 connection disconnected
 log.DEBUG: Mongoose oauth2 connection disconnected through app termination
+[33m[nodemon] 1.9.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./bin/www --log=debug --dbdebug1=true --homebeeserver`[39m
+log.DEBUG: app starting
+log.DEBUG: No ROOT Environment variable ...
+log.DEBUG: using: /Users/santosh/Developement/homebee/homebee-server-app/www
+api.DEBUG: {
+    "_": [],
+    "log": "debug",
+    "dbdebug1": "true",
+    "homebeeserver": true,
+    "$0": "bin/www"
+}
+log.DEBUG: Listening on port 4000
+log.DEBUG: Listening on port 4043
+log.DEBUG: Mongoose oauth2 connection open to mongodb://localhost/homebee_oauth2
+api.DEBUG: Checking OAUTH DB setup ...
+api.DEBUG: verify app client
+log.DEBUG: Mongoose homebee connection open to mongodb://localhost/homebee
+api.DEBUG: app client found
+api.DEBUG: verify dummy user
+api.DEBUG: verify super user
+api.DEBUG: verify app user
+api.DEBUG: super user found
+api.DEBUG: dummy user found
+api.DEBUG: verify device UUID-1
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+api.DEBUG: verify dummy user role
+api.DEBUG: verify super user role
+api.DEBUG: app user found
+api.DEBUG: dummy user role found
+api.DEBUG: super user role found
+api.DEBUG: found device UUID-1
+api.DEBUG: verify device UUID-2
+api.DEBUG: found device UUID-2
+api.DEBUG: {
+    "ensure_app_client": {
+        "_id": "57b57f4b1c03bab207e931a1",
+        "clientId": "HomeBeeApp",
+        "clientSecret": "HomeBee App Workers",
+        "__v": 0
+    },
+    "ensure_super_user": {
+        "_id": "57b57f4b1c03bab207e931a2",
+        "username": "superadmin",
+        "password": "password",
+        "firstname": "Santosh",
+        "lastname": "Singh",
+        "email": "santosh.singh@surya-solutions.com",
+        "__v": 0
+    },
+    "ensure_dummy_user": {
+        "_id": "57b57f4b1c03bab207e931a3",
+        "username": "dummy",
+        "password": "password",
+        "firstname": "Dummy",
+        "lastname": "User",
+        "email": "dummy.user@surya-solutions.com",
+        "__v": 0
+    },
+    "ensure_app_user": {
+        "_id": "57b57f4b1c03bab207e931a4",
+        "username": "homebeeapp",
+        "password": "H0m3b33@pp",
+        "__v": 0
+    },
+    "ensure_dummy_user_role": {
+        "_id": "57b57f4b1c03bab207e931a6",
+        "userId": "57b57f4b1c03bab207e931a3",
+        "clientId": "57b57f4b1c03bab207e931a1",
+        "role": "USER",
+        "__v": 0
+    },
+    "ensure_super_user_role": {
+        "_id": "57b57f4b1c03bab207e931a5",
+        "userId": "57b57f4b1c03bab207e931a2",
+        "clientId": "57b57f4b1c03bab207e931a1",
+        "role": "SUPER_ADMIN",
+        "__v": 0
+    },
+    "ensure_dummy_devices": [
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+api.DEBUG: DB setup complete
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ email: 'dummy', password: 'password' }
+api.DEBUG: logging in: dummy / password
+log.DEBUG: in getUserEmailPassword (email: dummy, password: password)
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0,
+  roles: [ 'USER' ] }
+returning all devices for user: 57b57f4b1c03bab207e931a3
+finished
+{ _id: 57b57f4b1c03bab207e931a3,
+  username: 'dummy',
+  password: 'password',
+  firstname: 'Dummy',
+  lastname: 'User',
+  email: 'dummy.user@surya-solutions.com',
+  __v: 0 }
+[ { deviceTYPE: 'divider', deviceUUID: 'SWITCH X 2' },
+  { _id: 57b57f4b1c03bab207e931a7,
+    deviceUUID: 'UUID-1',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 },
+  { _id: 57b57f4c1c03bab207e931a8,
+    deviceUUID: 'UUID-2',
+    deviceTYPE: 'SWITCH X 2',
+    version: '1.0',
+    status: 'ONLINE',
+    command: '',
+    user: 57b57f4b1c03bab207e931a3,
+    __v: 0 } ]
+api.DEBUG: {
+    "code": 200,
+    "devices": [
+        {
+            "deviceTYPE": "divider",
+            "deviceUUID": "SWITCH X 2"
+        },
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ grant_type: 'refresh_token',
+  client_id: 'HomeBeeDeviceApp',
+  client_secret: 'HomeBee Workers',
+  refresh_token: 'b461d3bdfb9ac2c3f0144480995e5909ffda9633' }
+Error
+    at OAuth2Error (/Users/santosh/Developement/homebee/homebee-server/node_modules/oauth2-server/lib/error.js:30:12)
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/oauth2-server/lib/grant.js:142:19
+    at Query.<anonymous> (/Users/santosh/Developement/homebee/homebee-server/node_modules/mongoose/lib/model.js:3361:16)
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/kareem/index.js:259:21
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/kareem/index.js:127:16
+    at _combinedTickCallback (node.js:370:9)
+    at process._tickCallback (node.js:401:11)
+{ grant_type: 'refresh_token',
+  client_id: 'JungleBeeMobileApp',
+  client_secret: 'HomeBee Workers',
+  refresh_token: 'b461d3bdfb9ac2c3f0144480995e5909ffda9633' }
+Error
+    at OAuth2Error (/Users/santosh/Developement/homebee/homebee-server/node_modules/oauth2-server/lib/error.js:30:12)
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/oauth2-server/lib/grant.js:142:19
+    at Query.<anonymous> (/Users/santosh/Developement/homebee/homebee-server/node_modules/mongoose/lib/model.js:3361:16)
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/kareem/index.js:259:21
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/kareem/index.js:127:16
+    at _combinedTickCallback (node.js:370:9)
+    at process._tickCallback (node.js:401:11)
+{ grant_type: 'refresh_token',
+  client_id: 'JungleBeeMobileApp',
+  client_secret: 'Bee Workers',
+  refresh_token: 'b461d3bdfb9ac2c3f0144480995e5909ffda9633' }
+Error
+    at OAuth2Error (/Users/santosh/Developement/homebee/homebee-server/node_modules/oauth2-server/lib/error.js:30:12)
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/oauth2-server/lib/grant.js:142:19
+    at Query.<anonymous> (/Users/santosh/Developement/homebee/homebee-server/node_modules/mongoose/lib/model.js:3361:16)
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/kareem/index.js:259:21
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/kareem/index.js:127:16
+    at _combinedTickCallback (node.js:370:9)
+    at process._tickCallback (node.js:401:11)
+api.DEBUG: Original URL: /1.0/oauth/token?debug=true
+api.DEBUG: Method: POST
+api.DEBUG: Query: {
+    "debug": "true"
+}
+api.DEBUG: Body Parameters: {
+    "grant_type": "password",
+    "client_id": "JungleBeeMobileApp",
+    "client_secret": "Bee Workers",
+    "username": "junglebeeapp",
+    "password": "Jungl3B33@pp"
+}
+api.DEBUG: Headers: {
+    "host": "localhost:4043",
+    "connection": "keep-alive",
+    "content-length": "120",
+    "cache-control": "no-cache",
+    "origin": "file://",
+    "content-type": "application/x-www-form-urlencoded",
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Postman/4.4.2 Chrome/51.0.2704.103 Electron/1.2.5 Safari/537.36",
+    "postman-token": "418a99ef-0aa4-e23d-5f6e-3880caf86de6",
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate",
+    "accept-language": "en-US"
+}
+{ grant_type: 'password',
+  client_id: 'JungleBeeMobileApp',
+  client_secret: 'Bee Workers',
+  username: 'junglebeeapp',
+  password: 'Jungl3B33@pp' }
+Error
+    at OAuth2Error (/Users/santosh/Developement/homebee/homebee-server/node_modules/oauth2-server/lib/error.js:30:12)
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/oauth2-server/lib/grant.js:142:19
+    at Query.<anonymous> (/Users/santosh/Developement/homebee/homebee-server/node_modules/mongoose/lib/model.js:3361:16)
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/kareem/index.js:259:21
+    at /Users/santosh/Developement/homebee/homebee-server/node_modules/kareem/index.js:127:16
+    at _combinedTickCallback (node.js:370:9)
+    at process._tickCallback (node.js:401:11)
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+{ grant_type: 'password',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  username: 'homebeeapp',
+  password: 'H0m3b33@pp' }
+log.DEBUG: in getUser (username: homebeeapp, password: H0m3b33@pp)
+log.DEBUG: Mongoose oauth2 connection disconnected
+log.DEBUG: Mongoose oauth2 connection disconnected through app termination
+[33m[nodemon] 1.9.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./bin/www --log=debug --dbdebug1=true --homebeeserver`[39m
+log.DEBUG: app starting
+log.DEBUG: No ROOT Environment variable ...
+log.DEBUG: using: /Users/santosh/Developement/homebee/homebee-server-app/www
+api.DEBUG: {
+    "_": [],
+    "log": "debug",
+    "dbdebug1": "true",
+    "homebeeserver": true,
+    "$0": "bin/www"
+}
+log.DEBUG: Listening on port 4000
+log.DEBUG: Listening on port 4043
+log.DEBUG: Mongoose oauth2 connection open to mongodb://localhost/homebee_oauth2
+api.DEBUG: Checking OAUTH DB setup ...
+api.DEBUG: verify app client
+log.DEBUG: Mongoose homebee connection open to mongodb://localhost/homebee
+api.DEBUG: app client found
+api.DEBUG: verify dummy user
+api.DEBUG: verify super user
+api.DEBUG: verify app user
+api.DEBUG: super user found
+api.DEBUG: verify super user role
+api.DEBUG: app user found
+api.DEBUG: dummy user found
+api.DEBUG: verify device UUID-1
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+api.DEBUG: verify dummy user role
+api.DEBUG: super user role found
+api.DEBUG: dummy user role found
+api.DEBUG: found device UUID-1
+api.DEBUG: verify device UUID-2
+api.DEBUG: found device UUID-2
+api.DEBUG: {
+    "ensure_app_client": {
+        "_id": "57b57f4b1c03bab207e931a1",
+        "clientId": "HomeBeeApp",
+        "clientSecret": "HomeBee App Workers",
+        "__v": 0
+    },
+    "ensure_super_user": {
+        "_id": "57b57f4b1c03bab207e931a2",
+        "username": "superadmin",
+        "password": "password",
+        "firstname": "Santosh",
+        "lastname": "Singh",
+        "email": "santosh.singh@surya-solutions.com",
+        "__v": 0
+    },
+    "ensure_app_user": {
+        "_id": "57b57f4b1c03bab207e931a4",
+        "username": "homebeeapp",
+        "password": "H0m3b33@pp",
+        "__v": 0
+    },
+    "ensure_dummy_user": {
+        "_id": "57b57f4b1c03bab207e931a3",
+        "username": "dummy",
+        "password": "password",
+        "firstname": "Dummy",
+        "lastname": "User",
+        "email": "dummy.user@surya-solutions.com",
+        "__v": 0
+    },
+    "ensure_super_user_role": {
+        "_id": "57b57f4b1c03bab207e931a5",
+        "userId": "57b57f4b1c03bab207e931a2",
+        "clientId": "57b57f4b1c03bab207e931a1",
+        "role": "SUPER_ADMIN",
+        "__v": 0
+    },
+    "ensure_dummy_user_role": {
+        "_id": "57b57f4b1c03bab207e931a6",
+        "userId": "57b57f4b1c03bab207e931a3",
+        "clientId": "57b57f4b1c03bab207e931a1",
+        "role": "USER",
+        "__v": 0
+    },
+    "ensure_dummy_devices": [
+        {
+            "_id": "57b57f4b1c03bab207e931a7",
+            "deviceUUID": "UUID-1",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        },
+        {
+            "_id": "57b57f4c1c03bab207e931a8",
+            "deviceUUID": "UUID-2",
+            "deviceTYPE": "SWITCH X 2",
+            "version": "1.0",
+            "status": "ONLINE",
+            "command": "",
+            "user": "57b57f4b1c03bab207e931a3",
+            "__v": 0
+        }
+    ]
+}
+api.DEBUG: DB setup complete
+{ grant_type: 'refresh_token',
+  client_id: 'HomeBeeApp',
+  client_secret: 'HomeBee App Workers',
+  refresh_token: '3b41e7bf103082c2fec614ac115868817ba47e5b' }
+Client { clientId: 'HomeBeeApp', clientSecret: 'HomeBee App Workers' }
+log.DEBUG: Mongoose oauth2 connection disconnected
+log.DEBUG: Mongoose oauth2 connection disconnected through app termination

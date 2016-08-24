@@ -220,7 +220,7 @@ var verifySetup = function(model, apidebug){
       }],
       ensure_dummy_user_role: ['ensure_app_client', 'ensure_dummy_user', function(callback, results){
         apidebug('verify dummy user role');
-          model.OAuthUserRolesModel.findOne({ userId: results.ensure_dummy_user._id, clientId: results.ensure_app_client._id }, function(err, userrole){
+          model.OAuthUserRolesModel.findOne({ userId: results.ensure_dummy_user._id, clientId: results.ensure_app_client._id, role: 'USER' }, function(err, userrole){
               if (err)
                 callback(err);
               else if (!userrole){
@@ -229,6 +229,30 @@ var verifySetup = function(model, apidebug){
                   userId: results.ensure_dummy_user._id,
                   clientId: results.ensure_app_client._id,
                   role: 'USER'
+                });
+                userrole.save(function(err, userrole){
+                    if (err) callback(err);
+                    else{
+                        callback(null, userrole);
+                    }
+                })
+              }else{
+                apidebug('dummy user role found')
+                callback(null, userrole);
+              }
+          });
+      }],
+      ensure_dummy_dev_user_role: ['ensure_app_client', 'ensure_dummy_user', function(callback, results){
+        apidebug('verify dummy user role');
+          model.OAuthUserRolesModel.findOne({ userId: results.ensure_dummy_user._id, clientId: results.ensure_app_client._id, role: 'DEV_USER' }, function(err, userrole){
+              if (err)
+                callback(err);
+              else if (!userrole){
+                apidebug('creating dummy user role');
+                userrole = new model.OAuthUserRolesModel({
+                  userId: results.ensure_dummy_user._id,
+                  clientId: results.ensure_app_client._id,
+                  role: 'DEV_USER'
                 });
                 userrole.save(function(err, userrole){
                     if (err) callback(err);
