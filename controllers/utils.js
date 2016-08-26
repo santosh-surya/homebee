@@ -78,12 +78,17 @@ var googleMapsConfig = {
 };
 
 var gmAPI = new GoogleMapsAPI(googleMapsConfig);
+String post = "grant_type=password&client_id=HomeBeeDevice&client_secret=HomeBee Device Workers&username=homebeedevice&password=H0m3b33D3v1c3";
 
 var verifySetup = function(model, apidebug){
   var CLIENT_ID = 'HomeBeeApp',
       CLIENT_SECRET =  'HomeBee App Workers',
       CLIENT_USERNAME = 'homebeeapp',
       CLIENT_PASSWORD = 'H0m3b33@pp',
+      CLIENT_ID_DEVICE = 'HomeBeeDevice',
+      CLIENT_SECRET_DEVICE =  'HomeBee Device Workers',
+      CLIENT_USERNAME_DEVICE = 'homebeedevice',
+      CLIENT_PASSWORD_DEVICE = 'H0m3b33D3v1c3',
       ADMIN_USERNAME = 'superadmin',
       ADMIN_PASSWORD = 'password',
       ADMIN_FIRSTNAME = 'Santosh',
@@ -118,6 +123,29 @@ var verifySetup = function(model, apidebug){
               }
           });
       },
+      ensure_device_client: function(callback){
+        apidebug('verify device client');
+          model.OAuthClientsModel.findOne({ clientId: CLIENT_ID_DEVICE, clientSecret: CLIENT_SECRET_DEVICE }, function(err, client){
+              if (err)
+                callback(err);
+              else if (!client){
+                apidebug('creating app client')
+                client = new model.OAuthClientsModel({clientId: CLIENT_ID_DEVICE, clientSecret: CLIENT_SECRET_DEVICE});
+                client.save(function(err, client){
+                    if (err) callback(err);
+                    else{
+                      _appClientId = client._id;
+                      apidebug('device client created.');
+                      callback(null, client);
+                    }
+                })
+              }else{
+                apidebug('device client found');
+                _appClientId = client._id;
+                callback(null, client);
+              }
+          });
+      },
       ensure_app_user: ['ensure_app_client', function(callback){
         apidebug('verify app user');
           model.OAuthUsersModel.findOne({ username: CLIENT_USERNAME, password: CLIENT_PASSWORD }, function(err, user){
@@ -135,6 +163,27 @@ var verifySetup = function(model, apidebug){
                 });
               }else{
                 apidebug('app user found');
+                callback(null, user);
+              }
+          });
+      }],
+      ensure_device_user: ['ensure_device_client', function(callback){
+        apidebug('verify device user');
+          model.OAuthUsersModel.findOne({ username: CLIENT_USERNAME_DEVICE, password: CLIENT_PASSWORD_DEVICE }, function(err, user){
+              if (err)
+                callback(err);
+              else if (!user){
+                apidebug('creating new device user');
+                user = new model.OAuthUsersModel({ username: CLIENT_USERNAME_DEVICE, password: CLIENT_PASSWORD_DEVICE });
+                user.save(function(err, user){
+                    if (err) callback(err);
+                    else{
+                        apidebug('device user created');
+                        callback(null, user);
+                    }
+                });
+              }else{
+                apidebug('device user found');
                 callback(null, user);
               }
           });
