@@ -166,7 +166,7 @@ var verifySetup = function(model, apidebug){
               }
           });
       }],
-      ensure_device_user: ['ensure_app_client', 'ensure_device_client', function(callback){
+      ensure_device_user: ['ensure_device_client', 'ensure_device_client', function(callback){
         apidebug('verify device user');
           model.OAuthUsersModel.findOne({ username: CLIENT_USERNAME_DEVICE, password: CLIENT_PASSWORD_DEVICE }, function(err, user){
               if (err)
