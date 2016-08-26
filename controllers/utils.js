@@ -78,7 +78,6 @@ var googleMapsConfig = {
 };
 
 var gmAPI = new GoogleMapsAPI(googleMapsConfig);
-String post = "grant_type=password&client_id=HomeBeeDevice&client_secret=HomeBee Device Workers&username=homebeedevice&password=H0m3b33D3v1c3";
 
 var verifySetup = function(model, apidebug){
   var CLIENT_ID = 'HomeBeeApp',
