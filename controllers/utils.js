@@ -187,7 +187,7 @@ var verifySetup = function(model, apidebug){
               }
           });
       }],
-      ensure_super_user: ['ensure_app_client', function(callback){
+      ensure_super_user: ['ensure_device_user', 'ensure_app_user', function(callback){
         apidebug('verify super user');
           model.OAuthUsersModel.findOne({ username: ADMIN_USERNAME, password: ADMIN_PASSWORD }, function(err, user){
               if (err)
@@ -214,7 +214,7 @@ var verifySetup = function(model, apidebug){
               }
           });
       }],
-      ensure_super_user_role: ['ensure_app_client', 'ensure_super_user', function(callback, results){
+      ensure_super_user_role: ['ensure_super_user', function(callback, results){
         apidebug('verify super user role');
           model.OAuthUserRolesModel.findOne({ userId: results.ensure_super_user._id, clientId: results.ensure_app_client._id }, function(err, userrole){
               if (err)
