@@ -61,7 +61,7 @@ var OAuthUsersSchema = new mongoose.Schema({
   password: { type: String },
   firstname: { type: String },
   lastname: { type: String },
-  email: { type: String, unique: true }
+  email: { type: String }
 });
 
 var OAuthUserRolesSchema = new mongoose.Schema({
