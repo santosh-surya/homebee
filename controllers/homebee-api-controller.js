@@ -18,6 +18,13 @@ function validateRegister(req){
     if (!req.body.version) error.push('No version found!');
     return error.join(', ');
 }
+function validatePing(req){
+    var error = new Array();
+    if (!req.userdevice){
+      error.push('No deviceUUID ID found!');
+    }
+    return error.join(', ');
+}
 
 function validateLogin(req){
     var error = new Array();
@@ -170,6 +177,24 @@ module.exports = {
                           }
                   });
                 }
+            }
+        }else{
+            var ret = {code: 401, error: 'invalid_request', error_description: 'Need POST request for this API call'};
+            res.status(401);
+            utils.apidebug(JSON.stringify(ret, null, 4));
+            res.json(ret);
+            res.end();
+        }
+    },
+    ping: function(req, res, next) {
+        if (req.method=='POST'){
+            var error = validatePing(req);
+            if (error.length>0){
+                var ret = {code: 401, error: 'invalid_request', error_description: error};
+                res.json(ret);
+                res.end();
+            }else{
+              utils.apidebug('ping received from: '+req.userdevice.deviceUUID);
             }
         }else{
             var ret = {code: 401, error: 'invalid_request', error_description: 'Need POST request for this API call'};
