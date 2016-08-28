@@ -48,7 +48,7 @@ module.exports = {
             async.series([
                 function(callback){
                     //ensur this is NOT a register device request
-                    // console.log(req.originalUrl);
+                    console.log(req.originalUrl);
                     if (req.originalUrl.indexOf('/homebee')<=0){
                         if (req.body.deviceUUID || req.query.deviceUUID){
                             req.app.models.HomeBeeDeviceModel.findOne({deviceUUID: req.body.deviceUUID || req.query.deviceUUID})
