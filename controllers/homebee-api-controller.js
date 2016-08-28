@@ -45,7 +45,7 @@ module.exports = {
                     if (req.originalUrl.indexOf('/homebee')<=0){
                         if (req.body.deviceUUID || req.query.deviceUUID){
                             req.app.models.HomeBeeDeviceModel.findOne({deviceUUID: req.body.deviceUUID || req.query.deviceUUID})
-                              .populate('user')
+                              .deepPopulate('user')
                               .exec(function (err, device) {
                                 if (err) callback(err);
                                 else {
