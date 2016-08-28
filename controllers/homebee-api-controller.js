@@ -195,6 +195,8 @@ module.exports = {
                 res.end();
             }else{
               utils.apidebug('ping received from: '+req.userdevice.deviceUUID);
+              res.json(req.userdevice);
+              res.end();
             }
         }else{
             var ret = {code: 401, error: 'invalid_request', error_description: 'Need POST request for this API call'};
