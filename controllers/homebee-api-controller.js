@@ -196,7 +196,7 @@ module.exports = {
             }else{
               res.status(200);
               utils.apidebug('ping received from: '+req.userdevice.deviceUUID);
-              res.json(code: 200, data: req.userdevice);
+              res.json({code: 200, data: req.userdevice});
               res.end();
             }
         }else{
