@@ -76,6 +76,7 @@ var HomeBeeDeviceSchema = new mongoose.Schema({
     status: String,
     command: String,
     lastUpdate: Date,
+    chipId: String,
     user:{ type:mongoose.Schema.ObjectId, ref:"OAuthUsers" }
 });
 HomeBeeDeviceSchema.plugin(deepPopulate, {});
