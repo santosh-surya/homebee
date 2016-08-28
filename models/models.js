@@ -87,11 +87,11 @@ HomeBeeDeviceSchema.plugin(deepPopulate, {});
 // mongoose.model('OAuthUsers', OAuthUsersSchema);
 // mongoose.model('OAuthUserRoles', OAuthUserRolesSchema);
 
-var OAuthAccessTokensModel = db.oauth2.model('OAuthAccessTokens', OAuthAccessTokensSchema),
-    OAuthRefreshTokensModel = db.oauth2.model('OAuthRefreshTokens', OAuthRefreshTokensSchema),
-    OAuthClientsModel = db.oauth2.model('OAuthClients', OAuthClientsSchema),
-    OAuthUsersModel = db.oauth2.model('OAuthUsers', OAuthUsersSchema),
-    OAuthUserRolesModel = db.oauth2.model('OAuthUserRoles', OAuthUserRolesSchema),
+var OAuthAccessTokensModel = db.homebee.model('OAuthAccessTokens', OAuthAccessTokensSchema),
+    OAuthRefreshTokensModel = db.homebee.model('OAuthRefreshTokens', OAuthRefreshTokensSchema),
+    OAuthClientsModel = db.homebee.model('OAuthClients', OAuthClientsSchema),
+    OAuthUsersModel = db.homebee.model('OAuthUsers', OAuthUsersSchema),
+    OAuthUserRolesModel = db.homebee.model('OAuthUserRoles', OAuthUserRolesSchema),
     HomeBeeDeviceModel = db.homebee.model('HomeBeeDevice', HomeBeeDeviceSchema);
 
 module.exports.HomeBeeDeviceModel = HomeBeeDeviceModel;
