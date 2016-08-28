@@ -145,12 +145,28 @@ module.exports = {
                                   res.end();
                               });
                           }else{
-                            var ret = {code: 401, error: 'invalid_request', error_description: 'Sorry device not registered'};
-                            res.status(401);
-                            utils.apidebug(JSON.stringify(ret, null, 4));
-                            res.json(ret);
-                            res.end();
-                          }
+                            //let us register this deviceUUID ... how did it disapper?
+                            device = new req.app.models.HomeBeeDeviceModel({deviceUUID: uuid.v1(), deviceTYPE: req.body.deviceTYPE, version: req.body.version});
+                            device.save(function(err, device) {
+                              if (err){
+                                  utils.apidebug(err);
+                                  res.json({
+                                    "code": 600,
+                                    "error": "system_error",
+                                    "error_description": err
+                                  });
+                                  res.end();
+                              }else{
+                                utils.apidebug('registered new device');
+                                res.status(200);
+                                res.json({
+                                  code: 200,
+                                  data: device.toJSON(),
+                                  claimedID: "NONE"
+                                });
+                                res.end();
+                              }
+                          });
                   });
                 }
             }
