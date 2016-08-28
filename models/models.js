@@ -91,7 +91,7 @@ var OAuthAccessTokensModel = db.oauth2.model('OAuthAccessTokens', OAuthAccessTok
     OAuthClientsModel = db.oauth2.model('OAuthClients', OAuthClientsSchema),
     OAuthUsersModel = db.oauth2.model('OAuthUsers', OAuthUsersSchema),
     OAuthUserRolesModel = db.oauth2.model('OAuthUserRoles', OAuthUserRolesSchema),
-    HomeBeeDeviceModel = db.homebee.model('HomeBeeDevice', HomeBeeDeviceSchema);
+    HomeBeeDeviceModel = db.oauth2.model('HomeBeeDevice', HomeBeeDeviceSchema);
 
 module.exports.HomeBeeDeviceModel = HomeBeeDeviceModel;
 module.exports.OAuthUsersModel = OAuthUsersModel;
