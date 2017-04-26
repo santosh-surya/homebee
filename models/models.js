@@ -81,6 +81,20 @@ var HomeBeeDeviceSchema = new mongoose.Schema({
 });
 HomeBeeDeviceSchema.plugin(deepPopulate, {});
 
+var HomeBeeDeviceFirmewareSchema = new mongoose.Schema({
+    deviceTYPE: String,
+    version: String,
+    filename: String
+});
+var HomeBeeDeviceCommandsSchema = new mongoose.Schema({
+    device:{ type:mongoose.Schema.ObjectId, ref:"HomeBeeDevice" },
+    command: String,
+    createDate: Date,
+    updateDate: Date,
+    pending: Boolean
+});
+HomeBeeDeviceCommandsSchema.plugin(deepPopulate, {});
+
 // mongoose.model('OAuthAccessTokens', OAuthAccessTokensSchema);
 // mongoose.model('OAuthRefreshTokens', OAuthRefreshTokensSchema);
 // mongoose.model('OAuthClients', OAuthClientsSchema);
@@ -92,9 +106,13 @@ var OAuthAccessTokensModel = db.homebee.model('OAuthAccessTokens', OAuthAccessTo
     OAuthClientsModel = db.homebee.model('OAuthClients', OAuthClientsSchema),
     OAuthUsersModel = db.homebee.model('OAuthUsers', OAuthUsersSchema),
     OAuthUserRolesModel = db.homebee.model('OAuthUserRoles', OAuthUserRolesSchema),
-    HomeBeeDeviceModel = db.homebee.model('HomeBeeDevice', HomeBeeDeviceSchema);
+    HomeBeeDeviceModel = db.homebee.model('HomeBeeDevice', HomeBeeDeviceSchema),
+    HomeBeeDeviceFirmwareModel = db.homebee.model('HomeBeeDeviceFirmware', HomeBeeDeviceFirmewareSchema);
+    HomeBeeDeviceCommandsModel = db.homebee.model('HomeBeeDeviceCommands', HomeBeeDeviceCommandsSchema),
 
 module.exports.HomeBeeDeviceModel = HomeBeeDeviceModel;
+module.exports.HomeBeeDeviceFirmwareModel = HomeBeeDeviceFirmwareModel;
+module.exports.HomeBeeDeviceCommandsModel = HomeBeeDeviceCommandsModel;
 module.exports.OAuthUsersModel = OAuthUsersModel;
 module.exports.OAuthUserRolesModel = OAuthUserRolesModel;
 module.exports.OAuthClientsModel = OAuthClientsModel;
@@ -105,7 +123,9 @@ db.oauth2.on('connected', function (db) {
     OAuthClientsModel: OAuthClientsModel,
     OAuthUsersModel: OAuthUsersModel,
     OAuthUserRolesModel: OAuthUserRolesModel,
-    HomeBeeDeviceModel: HomeBeeDeviceModel
+    HomeBeeDeviceModel: HomeBeeDeviceModel,
+    HomeBeeDeviceFirmwareModel: HomeBeeDeviceFirmwareModel,
+    HomeBeeDeviceCommandsModel: HomeBeeDeviceCommandsModel
   }, utils.apidebug);
 });
 //

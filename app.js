@@ -82,12 +82,13 @@ app.use(app.oauth.errorHandler());
 var storage =   multer.diskStorage({
   destination: function (req, file, callback) {
       // console.log(file)
-    callback(null, './public/uploads');
+    callback(null, './public/firmwares');
   },
   filename: function (req, file, callback) {
       // console.log(file);
-      utils.apidebug("uploading file: " + file.fieldname + '-' + Date.now()+path.extname(file.originalname));
-    callback(null, file.fieldname + '-' + Date.now()+path.extname(file.originalname));
+      var filename = file.fieldname + '-' + Date.now()+path.extname(file.originalname);
+      utils.apidebug("uploading file: " + filename);
+    callback(null, filename);
   }
 });
 
@@ -101,7 +102,7 @@ var homebee = require('./routes/route-homebee');
 //setup api route
 
 
-app.use('/1.0/homebee', utils.debugApiRequest, app.oauth.authorise(), app.upload.array('files', 10), homebee);
+app.use('/1.0/homebee', utils.debugApiRequest, app.oauth.authorise(), app.upload.single('firmware'), homebee);
 // app.use('/1.0/api', app.oauth.authorise(), utils.debugApiRequest, api);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -26,6 +26,7 @@
     "intel": "^1.1.0",
     "jade": "~1.11.0",
     "json-stringify-safe": "^5.0.1",
+    "md5-file": "^3.1.1",
     "moment": "^2.11.2",
     "mongodb": "^2.1.4",
     "mongoose": "^4.3.5",
@@ -35,6 +36,7 @@
     "node-xlsx": "^0.6.0",
     "oauth2-server": "^2.4.1",
     "serve-favicon": "~2.3.0",
+    "socket.io": "latest",
     "uuid": "^2.0.2",
     "winston": "^2.1.1",
     "yargs": "^3.32.0"
